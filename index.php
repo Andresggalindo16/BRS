@@ -1,4 +1,11 @@
-<!-- ======= UwU ======= -->
+<!-- ======= valdiacion de usuario ======= -->
+<?php 
+session_start();
+if(!isset($_SESSION['usuario'])){
+  header('location: login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,13 +36,14 @@
   
   <!-- ======= UwU ======= -->
 
-  <main id="main" class="main">
 
+  <main id="main" class="main">
+    <div class="alert alert-success" role="alert">
+      Bienvenido <?php  echo $_SESSION['usuario'] ?>!
+    </div>
     <center>
       <img src="assets/img/brs.png" style="width: 30%; margin: 15% 0 15% 0">
     </center>
-
-
 
   </main><!-- End #main -->
 

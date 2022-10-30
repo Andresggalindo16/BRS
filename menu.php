@@ -1,3 +1,10 @@
+<!-- ======= valdiacion de usuario ======= -->
+<?php 
+session_start();
+if(!isset($_SESSION['usuario'])){
+  header('location: login.php');
+}
+?>
 
 <header id="header" class="header fixed-top d-flex align-items-center">
 
@@ -7,8 +14,6 @@
   </a>
   <i class="bi bi-list toggle-sidebar-btn"></i>
 </div><!-- End Logo -->
-
-
 
 <nav class="header-nav ms-auto">
   <ul class="d-flex align-items-center">
@@ -22,8 +27,8 @@
 
     </li><!-- End Messages Nav -->
 
+      <span> <?php  echo $_SESSION['usuario'] ?> </span>
     <li class="nav-item dropdown pe-3">
-
       <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
         <span class="d-none d-md-block dropdown-toggle ps-2"><img src="assets/img/encendido.png" width="30px"
             alt=""></span>
@@ -43,10 +48,8 @@
 </nav><!-- End Icons Navigation -->
 
 </header><!-- End Header -->
-
 <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar">
-
 <ul class="sidebar-nav" id="sidebar-nav">
   <li class="nav-heading">PÁGINAS</li>
   <li class="nav-item">

@@ -29,7 +29,7 @@
 
   <main>    
     <div class="container">
-    <form action="">
+    <form action="controller/loginController.php">
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
         <div class="container">
           <div class="row justify-content-center">
@@ -49,21 +49,22 @@
                     <h5 class="card-title text-center pb-0 fs-4">Ingreso al sistema</h5>
                     <p class="text-center small">Digita usuario y contraseña</p>
                   </div>
-
                   <form class="row g-3 needs-validation" >
-                   
-                    <div class="col-12">
+                  <?php  if(!empty($_REQUEST['msg'])): ?>
+                  <div class="alert alert-danger" role="alert">
+                        <?php echo $_REQUEST['msg'] ?>
+                  </div>
+                  <?php endif  ?> 
+                  <div class="col-12">
                       <label for="yourUsername" class="form-label">Usuario</label>
                       <div class="input-group has-validation">                        
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
-                                                
-                        
+                        <input type="text" name="username" class="form-control" id="yourUsername">
                       </div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Contraseña</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>                                                   
+                      <input type="password" name="password" class="form-control" id="yourPassword">                                                   
                     </div>
                     <br>
                     <br>
