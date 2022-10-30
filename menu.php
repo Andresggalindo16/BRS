@@ -68,6 +68,12 @@
       <span>Solicitudes Finalizadas</span>
     </a>
   </li><!-- End F.A.Q Page Nav -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="validacion_clientes.php">
+      <i class="ri-briefcase-2-line"></i>
+      <span>Clientes</span>
+    </a>
+  </li>
 
   <li class="nav-item">
     <a class="nav-link collapsed" href="validacion_usuario.php">
