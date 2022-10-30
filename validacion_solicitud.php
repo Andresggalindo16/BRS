@@ -1,3 +1,5 @@
+
+<?php require_once "controller/solicitudescontroller.php"?>
 <!-- ======= UwU ======= -->
 <!DOCTYPE html>
 <html lang="en">
