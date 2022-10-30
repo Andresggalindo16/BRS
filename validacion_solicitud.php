@@ -1,3 +1,5 @@
+
+<?php require_once "controller/solicitudescontroller.php"?>
 <!-- ======= UwU ======= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -27,8 +29,6 @@
 </head>
 
 <body>
-
-
 
    <!-- ======= Header ======= -->
    <header id="header" class="header fixed-top d-flex align-items-center">
@@ -119,131 +119,128 @@
 
   </aside><!-- End Sidebar-->
   <!-- ======= UwU ======= -->
-
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Paciente</h1>
+      <h1>Validación de solicitudes</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-          <li class="breadcrumb-item"><a href="validacion-del-paciente.html"> Validación de Pacientes</a></li>
-          <li class="breadcrumb-item active">Paciente</li>
+
+          <li class="breadcrumb-item active">Validación de solicitudes</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
     <section class="section">
       <div class="row">
-        <div class="caja">
+        <div class="col-lg-12">
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Información Basica</h5>
+              <h5 class="card-title">Solicitudes Pendientes</h5>
+              <a href="creacion_solicitud.html"><button type="button" class="btn btn-success rounded-pill">Crear solicitud</button></a>
+              <br>
+              <br>
 
-              <!-- General Form Elements -->
-              <form>
-                <div class="row mb-3">
-                  <label for="inputEmail" class="col-sm-2 col-form-label" >N° solicitud</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" style='width: 20%;'>
-                  </div>
-                </div>
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
 
+                    <th scope="col">N° solicitud</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Prioridad</th>
+                    <th scope="col">Fecha</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="actualizar_solicitud.php">HLP-001</a></td>
+                    <td>Error Solicitudes</td>
+                    <td>Sanitas</td>
+                    <td>Alta</td>
+                    <td>2022-10-24</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">HLP-001</a></td>
+                    <td>Error Solicitudes</td>
+                    <td>Sanitas</td>
+                    <td>Alta</td>
+                    <td>2022-10-24</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">HLP-001</a></td>
+                    <td>Error Solicitudes</td>
+                    <td>Sanitas</td>
+                    <td>Alta</td>
+                    <td>2022-10-24</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">HLP-001</a></td>
+                    <td>Error Solicitudes</td>
+                    <td>Sanitas</td>
+                    <td>Alta</td>
+                    <td>2022-10-24</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">HLP-001</a></td>
+                    <td>Error Solicitudes</td>
+                    <td>Sanitas</td>
+                    <td>Alta</td>
+                    <td>2022-10-24</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">HLP-001</a></td>
+                    <td>Error Solicitudes</td>
+                    <td>Sanitas</td>
+                    <td>Alta</td>
+                    <td>2022-10-24</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">HLP-001</a></td>
+                    <td>Error Solicitudes</td>
+                    <td>Sanitas</td>
+                    <td>Alta</td>
+                    <td>2022-10-24</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">HLP-001</a></td>
+                    <td>Error Solicitudes</td>
+                    <td>Sanitas</td>
+                    <td>Alta</td>
+                    <td>2022-10-24</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">HLP-001</a></td>
+                    <td>Error Solicitudes</td>
+                    <td>Sanitas</td>
+                    <td>Alta</td>
+                    <td>2022-10-24</td>
+                  </tr>
+                  <tr>
 
+                  <tr>
+                    <td><a href="">HLP-001</a></td>
+                    <td>Error Solicitudes</td>
+                    <td>Sanitas</td>
+                    <td>Alta</td>
+                    <td>2022-10-24</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End Table with stripped rows -->
 
-                <div class="row mb-3">
-                  <label for="inputEmail" class="col-sm-2 col-form-label">Título solicitud</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-
-                <div class="row mb-3">
-                  <span class="input-group-text" style=" width: 17%;margin-left: 1%;">Solución</span>
-                  <textarea class="col-sm-2 col-form-label" style=" width: 81%;" aria-label="With textarea"></textarea>
-                </div>
-
-                <br>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-2 col-form-label">Prioridad</label>
-                  <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected>[Seleccione]</option>
-                      <option value="1" style="color:#dd141d;">Urgente</option>
-                      <option value="2" style="color:#ff5630;">Alta </option>
-                      <option value="3" style="color:#ffab00;">Media </option>
-                      <option value="4" style="color:#0065ff;">Baja</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Cliente</label>
-                  <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected>[Seleccione]</option>
-                      <option value="1">Sanitas</option>
-                      <option value="2">ser salu</option>
-                      <option value="3">Hestratego</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Ambiente solicitado</label>
-                  <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected>[Seleccione]</option>
-                      <option value="1">Producción</option>
-                      <option value="2">Pruebas</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Responsable</label>
-                  <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected>[Seleccione]</option>
-                      <option value="1">Jerney</option>
-                      <option value="2">Harnuel</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-floating mb-3">
-                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                    style="height: 100px;"></textarea>
-                  <label for="floatingTextarea">Observaciones Finales</label>
-                </div>
-
-
-              </form><!-- End General Form Elements -->
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Comentarios del Responsable</h5>
-              <form action="">
-                <div class="form-floating mb-3">
-                <p>Jerney dd-mm-aa</p>
-              </div>
-                <div class="form-floating mb-3">
-                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                    style="height: 100px;"></textarea>
-                    <label for="floatingTextarea">Comentarios</label>
-                </div>
-              </form>
-              <Center>
-                <button type="button" class="btn btn-success">Finalizar solicitud</button>
-              </Center>
-            </div>
-          </div>
-
 
         </div>
       </div>
     </section>
 
   </main><!-- End #main -->
+
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
