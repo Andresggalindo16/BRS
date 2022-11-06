@@ -59,7 +59,7 @@ if(!isset($_SESSION['usuario'])){
     </a>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/validacion_solicitud.php">
+    <a class="nav-link collapsed" href="validacion_solicitud.php">
       <i class="ri-file-copy-2-line"></i>
       <span>Solicitudes Pendientes</span>
     </a>
