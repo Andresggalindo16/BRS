@@ -11,12 +11,17 @@
 :root {
   scroll-behavior: smooth;
 }
+#usuario {
+  font-family: "Open Sans", sans-serif;  
+  color: rgb(255, 255, 255);
+}
 
 body {
   font-family: "Open Sans", sans-serif;
   background: #f6f9ff;
-  color: #fff;
+  color: rgb(33, 30, 30);
 }
+
 
 a {
   color: #4154f1;
