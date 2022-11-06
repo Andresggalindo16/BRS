@@ -9,7 +9,7 @@ if(!isset($_SESSION['usuario'])){
 <header id="header" class="header fixed-top d-flex align-items-center">
 
 <div class="d-flex align-items-center justify-content-between">
-  <a href="index.html">
+  <a href="index.php">
     <img src="assets/img/brs.png" alt="" width="150px" height="52px">
   </a>
   <i class="bi bi-list toggle-sidebar-btn"></i>
