@@ -1,4 +1,6 @@
 
+
+
 <header id="header" class="header fixed-top d-flex align-items-center">
 
 <div class="d-flex align-items-center justify-content-between">
@@ -56,21 +58,21 @@
     </a>
   </li><!-- End Dashboard Nav -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/validacion_solicitud.php">
+    <a class="nav-link collapsed" href="validacion_solicitud.php?Listar">
       <i class="ri-file-copy-2-line"></i>
       <span>Solicitudes Pendientes</span>
     </a>
   </li><!-- End Profile Page Nav -->
 
   <li class="nav-item">
-    <a class="nav-link collapsed" href="validacion-finalizada.php">
+    <a class="nav-link collapsed" href="validacion-finalizada.php?Listar">
       <i class="ri-chat-check-line"></i>
       <span>Solicitudes Finalizadas</span>
     </a>
   </li><!-- End F.A.Q Page Nav -->
 
   <li class="nav-item">
-    <a class="nav-link collapsed" href="validacion_usuario.php">
+    <a class="nav-link collapsed" href="validacion_usuario.php?Listar">
       <i class="ri-account-pin-box-line"></i>
       <span>Usuarios</span>
     </a>

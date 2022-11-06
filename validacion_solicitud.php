@@ -52,7 +52,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Solicitudes Pendientes</h5>
-              <a href="creacion_solicitud.php"><button type="button" class="btn btn-success rounded-pill">Crear solicitud</button></a>
+              <a href="creacion_solicitud.php?addSolicitud"><button type="button" class="btn btn-success rounded-pill">Crear solicitud</button></a>
               <br>
               <br>
 
@@ -69,78 +69,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td><a href="actualizar_solicitud.php">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
+                  <?php for ($i=0; $i < count($solicitud) ; $i++) { ?>
+                    <tr>
+                      <td><a href="actualizar_solicitud.php?verSolicitud=<?php echo $solicitud[$i]['idSolicitud'] ?>"><?php echo $solicitud[$i]['idSolicitud'] ?></a></td>
+                      <td><?php echo $solicitud[$i]['titulo'] ?></td>
+                      <td><?php echo $solicitud[$i]['cliente_nombre'] ?></td>
+                      <td><?php echo $solicitud[$i]['prioridad'] ?></td>
+                      <td><?php echo $solicitud[$i]['fechaRegistro']?></td>
+                    </tr>
+                  <?php } ?>
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
