@@ -35,12 +35,12 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Paciente</h1>
+      <h1>Solicitudes</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
-          <li class="breadcrumb-item"><a href="validacion-del-paciente.html"> Validación de Pacientes</a></li>
-          <li class="breadcrumb-item active">Paciente</li>
+          <li class="breadcrumb-item"><a href="validacion-del-paciente.html"> Validación de solicitudes</a></li>
+          <li class="breadcrumb-item active">Solicitud</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->

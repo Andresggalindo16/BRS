@@ -81,14 +81,12 @@ if (!isset($_SESSION['usuario'])) {
         <span>Usuarios</span>
       </a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link collapsed" href="#">
         <i class="ri-bar-chart-fill"></i>
         <span>Reportes</span>
       </a>
-    </li><!-- End Contact Page Nav -->
-    <!-- End Components Nav -->
-
+    </li> End Contact Page Nav -->
   </ul>
 
 </aside><!-- End Sidebar-->
