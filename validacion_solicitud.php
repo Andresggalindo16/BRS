@@ -51,10 +51,14 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Solicitudes Pendientes</h5>
+            <?php if(isset($_GET['ListarFinalizadas'])){
+
+            }else{ ?>  
+            <h5 class="card-title">Solicitudes Pendientes</h5>
               <a href="creacion_solicitud.php?addSolicitud"><button type="button" class="btn btn-success rounded-pill">Crear solicitud</button></a>
               <br>
               <br>
+              <?php } ?>
 
               <!-- Table with stripped rows -->
               <table class="table datatable">

@@ -20,7 +20,12 @@ class solicitudes
 
     function getsolicitudes()
     {
-        $sql = "SELECT s.*, c.nombre as cliente_nombre  from solicitudes s inner join clientes c on s.idCliente = c.idCliente ";
+        $sql = "SELECT s.*, c.nombre as cliente_nombre  from solicitudes s inner join clientes c on s.idCliente = c.idCliente where s.idEstado = '1' ";
+        return $this->conn->getData($sql);
+    }
+    function getsolicitudesFinalizadas()
+    {
+        $sql = "SELECT s.*, c.nombre as cliente_nombre  from solicitudes s inner join clientes c on s.idCliente = c.idCliente where s.idEstado = '2' ";
         return $this->conn->getData($sql);
     }
 
@@ -35,7 +40,7 @@ class solicitudes
     }
 
     function updateSolicitud($post){
-        $sql = "UPDATE solicitudes set comentarioFinal = '{$post['comentarioFinal']}' where idSolicitud = '{$post['idSolicitud']}' ";
+        $sql = "UPDATE solicitudes set idEstado = '2' comentarioFinal = '{$post['comentarioFinal']}' where idSolicitud = '{$post['idSolicitud']}' ";
         return $this->conn->updateData($sql);
     }
   

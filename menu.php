@@ -65,7 +65,7 @@
   </li><!-- End Profile Page Nav -->
 
   <li class="nav-item">
-    <a class="nav-link collapsed" href="validacion-finalizada.php?Listar">
+    <a class="nav-link collapsed" href="validacion_solicitud.php?ListarFinalizadas">
       <i class="ri-chat-check-line"></i>
       <span>Solicitudes Finalizadas</span>
     </a>
