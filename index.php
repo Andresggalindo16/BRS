@@ -42,7 +42,7 @@ if(!isset($_SESSION['usuario'])){
       Bienvenido <?php  echo $_SESSION['usuario'] ?>!
     </div>
     <center>
-      <img src="assets/img/brs.png" style="width: 30%; margin: 15% 0 15% 0">
+      <img src="assets/img/brsnegro.png" style=" margin: 15% 0 15% 0">
     </center>
 
   </main><!-- End #main -->

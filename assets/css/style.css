@@ -11,12 +11,17 @@
 :root {
   scroll-behavior: smooth;
 }
+#usuario {
+  font-family: "Open Sans", sans-serif;  
+  color: rgb(255, 255, 255);
+}
 
 body {
   font-family: "Open Sans", sans-serif;
   background: #f6f9ff;
-  color: #444444;
+  color: rgb(33, 30, 30);
 }
+
 
 a {
   color: #4154f1;
@@ -354,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
   height: 60px;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-  background-color: #fff;
+  background-color: #1a1a3e;
   padding-left: 20px;
   /* Toggle Sidebar Button */
   /* Search Bar */
@@ -363,7 +368,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
-  color: #012970;
+  color: #fff;
 }
 .header .search-bar {
   min-width: 360px;
@@ -539,7 +544,7 @@ h1, h2, h3, h4, h5, h6 {
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  background-color: #fff;
+  background-color: #212157;
 }
 @media (max-width: 1199px) {
   .sidebar {
@@ -611,15 +616,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #4154f1;
 }
 .sidebar-nav .nav-link.collapsed {
-  color: #012970;
-  background: #fff;
+  color: #fff;
+  background: #212157;
 }
 .sidebar-nav .nav-link.collapsed i {
   color: #899bbd;
 }
 .sidebar-nav .nav-link:hover {
-  color: #4154f1;
-  background: #f6f9ff;
+  color: #fff;
+  background: #293f6f;
 }
 .sidebar-nav .nav-link:hover i {
   color: #4154f1;

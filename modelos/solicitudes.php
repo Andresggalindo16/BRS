@@ -3,7 +3,6 @@
 class solicitudes
 {
 
-
     // Conexión
     private $conn;
 
@@ -18,24 +17,31 @@ class solicitudes
         $this->conn = new Conexion();
     }
 
-    public function set($atributo, $contenido)
-    {
-        $this->$atributo = $contenido;
-    }
-
-    public function get($atributo)
-    {
-        return $this->$atributo;
-    }
-
 
     function getsolicitudes()
     {
-        $sql = "SELECT * from solicitudes";
+        $sql = "SELECT s.*, c.nombre as cliente_nombre  from solicitudes s inner join clientes c on s.idCliente = c.idCliente where s.idEstado = '1' ";
         return $this->conn->getData($sql);
     }
-   
-   
+    function getsolicitudesFinalizadas()
+    {
+        $sql = "SELECT s.*, c.nombre as cliente_nombre  from solicitudes s inner join clientes c on s.idCliente = c.idCliente where s.idEstado = '2' ";
+        return $this->conn->getData($sql);
+    }
 
+    function getSolicitudesId($id){
+        $sql = "SELECT s.*, c.nombre as cliente_nombre  from solicitudes s inner join clientes c on s.idCliente = c.idCliente where s.idSolicitud = $id";
+        return $this->conn->getData($sql);
+    }
+
+    function insertSolicitud($post){
+        $sql = "INSERT INTO solicitudes (titulo,solucion,ambiente,idCliente,prioridad,observaciones,idEstado) values('{$post['titulo']}','{$post['solucion']}','{$post['ambiente']}', '{$post['cliente']}', '{$post['prioridad']}', '{$post['observacion']}', '1')";
+        return $this->conn->updateData($sql);
+    }
+
+    function updateSolicitud($post){
+        $sql = "UPDATE solicitudes set idEstado = '2', comentarioFinal = '{$post['comentarioFinal']}' where idSolicitud = {$post['idSolicitud']} ";
+        return $this->conn->updateData($sql);
+    }
   
 }
