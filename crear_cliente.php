@@ -33,7 +33,7 @@
     <!-- ======= UwU ======= -->
 
     <main id="main" class="main">
-        <form name="formulario" action="..\controllers\controladorusuario.php" method="post">
+        <form name="formulario" action="controller/clienteController.php" method="post">
             <div class="pagetitle">
                 <h1>Creación de cliente</h1>
                 <nav>
@@ -49,7 +49,6 @@
             <section class="section">
                 <div class="row">
                     <div class="caja">
-
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Creación de cliente</h5>                                
@@ -57,31 +56,30 @@
                                     <div class="row mb-3">
                                         <label for="inputEmail" class="col-sm-2 col-form-label">Razón social</label>
                                         <div class="col-sm-10">
-                                            <input type="hidden" name="id" id="id">
-                                            <input type="hidden" name="operacion" id="operacion">
-                                            <input type="text" class="form-control" name="usuario">
+                                            <input type="text" require class="form-control" name="cliente">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <label for="inputEmail" class="col-sm-2 col-form-label">Nit</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="contrasena" class="form-control">
+                                            <input type="text" require name="nit" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <label for="text" class="col-sm-2 col-form-label">Versión del sistema</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="confirmar" class="form-control">
+                                            <input type="text" require name="version" class="form-control">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <label for="text" class="col-sm-2 col-form-label">Url del cliente</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="confirmar" class="form-control">
+                                            <input type="text" require name="url" class="form-control">
                                         </div>
-                                    </div>                                   
+                                    </div>
+                                    <input type="hidden" name="crear" value="crear">                                   
                                     <div class="text-center">
-                                        <input type="submit" onclick="" class="btn btn-outline-primary" value="Guardar">
+                                        <input type="submit" class="btn btn-outline-primary" value="Guardar">
                                     </div>
                                 </form>
                             </div>
