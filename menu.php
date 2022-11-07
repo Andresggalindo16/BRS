@@ -52,6 +52,7 @@ if (!isset($_SESSION['usuario'])) {
 </header><!-- End Header -->
 <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar">
+
   <ul class="sidebar-nav" id="sidebar-nav">
     <li class="nav-heading">PÁGINAS</li>
     <li class="nav-item">
@@ -61,48 +62,37 @@ if (!isset($_SESSION['usuario'])) {
       </a>
     </li><!-- End Dashboard Nav -->
     <li class="nav-item">
-      <a class="nav-link collapsed" href="validacion_solicitud.php">
+      <a class="nav-link collapsed" href="validacion_solicitud.php?Listar">
         <i class="ri-file-copy-2-line"></i>
         <span>Solicitudes Pendientes</span>
       </a>
     </li><!-- End Profile Page Nav -->
 
-<ul class="sidebar-nav" id="sidebar-nav">
-  <li class="nav-heading">PÁGINAS</li>
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="index.php">
-      <i class="bi bi-grid-fill"></i>
-      <span>Inicio</span>
-    </a>
-  </li><!-- End Dashboard Nav -->
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="validacion_solicitud.php?Listar">
-      <i class="ri-file-copy-2-line"></i>
-      <span>Solicitudes Pendientes</span>
-    </a>
-  </li><!-- End Profile Page Nav -->
-
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="validacion_solicitud.php?ListarFinalizadas">
-      <i class="ri-chat-check-line"></i>
-      <span>Solicitudes Finalizadas</span>
-    </a>
-  </li><!-- End F.A.Q Page Nav -->
-
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="validacion_usuario.php?Listar">
-      <i class="ri-account-pin-box-line"></i>
-      <span>Usuarios</span>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="validacion_solicitud.php?ListarFinalizadas">
+        <i class="ri-chat-check-line"></i>
+        <span>Solicitudes Finalizadas</span>
+      </a>
+    </li><!-- End F.A.Q Page Nav -->
+    <li class="nav-item">
+    <a class="nav-link collapsed" href="validacion_clientes.php">
+      <i class="ri-briefcase-2-line"></i>
+      <span>Clientes</span>
     </a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#">
-      <i class="ri-bar-chart-fill"></i>
-      <span>Reportes</span>
-    </a>
-  </li><!-- End Contact Page Nav -->
-  <!-- End Components Nav -->
 
-</ul>
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="validacion_usuario.php?Listar">
+        <i class="ri-account-pin-box-line"></i>
+        <span>Usuarios</span>
+      </a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link collapsed" href="#">
+        <i class="ri-bar-chart-fill"></i>
+        <span>Reportes</span>
+      </a>
+    </li> End Contact Page Nav -->
+  </ul>
 
 </aside><!-- End Sidebar-->
