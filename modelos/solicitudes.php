@@ -40,7 +40,7 @@ class solicitudes
     }
 
     function updateSolicitud($post){
-        $sql = "UPDATE solicitudes set idEstado = '2' comentarioFinal = '{$post['comentarioFinal']}' where idSolicitud = '{$post['idSolicitud']}' ";
+        $sql = "UPDATE solicitudes set idEstado = '2', comentarioFinal = '{$post['comentarioFinal']}' where idSolicitud = {$post['idSolicitud']} ";
         return $this->conn->updateData($sql);
     }
   
