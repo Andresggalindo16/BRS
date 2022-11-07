@@ -1,3 +1,12 @@
+
+<?php 
+
+require_once "modelos/usuario.php"; 
+
+$usuario = new usuario;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,21 +67,18 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                   
                     <th scope="col">Usuario</th>
                     <th scope="col">Tipo Usuario</th>
-                    <th scope="col">opciones</th>
-                    
+                    <th scope="col">Estado</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                      
-                
-                    <td>roberto</td>
-                    <td> desarrollador</td>
-                    <td><a href="actualizar_usuario.php"> Editar/Eliminar</a></td>
-                    
+                    <?php  foreach ($usuario->getUsuario() as $usuarios): ?>
+                    <td><a href="actualizar_usuario.php"> <?php echo $usuarios['usuario']  ?></td>
+                    <td> <?php echo $usuario->getRol($usuarios['idRol'])[0]  ?> </td>
+                    <td> <?php echo $usuarios['estado'] == 'on' ? 'Activo' : 'Inactivo'  ?> </td>
+                    <?php  endforeach;  ?>
                   </tr>
                 
                 </tbody>

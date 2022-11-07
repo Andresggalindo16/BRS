@@ -33,13 +33,13 @@
     <!-- ======= UwU ======= -->
 
     <main id="main" class="main">
-        <form name="formulario" action="..\controllers\controladorusuario.php" method="post">
+        <form name="formulario" action="controller/actualizarController.php" method="post">
             <div class="pagetitle">
                 <h1>Creación de cliente</h1>
                 <nav>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../views/vistainicio.php">Inicio</a></li>
-                        <li class="breadcrumb-item"><a href="../views/validacion_clientes.php">Validación de clientes</a>
+                        <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="validacion_clientes.php">Validación de clientes</a>
                         </li>
                         <li class="breadcrumb-item active">Creación de cliente</li>
                     </ol>
@@ -49,44 +49,43 @@
             <section class="section">
                 <div class="row">
                     <div class="caja">
-
+                        <input type="hidden" name="actualizar" value="actualizar">
+                        <input type="hidden" name="id" value="<?php echo $_REQUEST['id']  ?>">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Creación de cliente</h5>                                
+                                <h5 class="card-title">Editar cliente</h5>                                
                                 <form>
                                     <div class="row mb-3">
                                         <label for="inputEmail" class="col-sm-2 col-form-label">Razón social</label>
                                         <div class="col-sm-10">
-                                            <input type="hidden" name="id" id="id">
-                                            <input type="hidden" name="operacion" id="operacion">
-                                            <input type="text" class="form-control" name="usuario">
+                                            <input type="text" class="form-control" name="cliente" value="<?php echo $_REQUEST['nombre'] ?>">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <label for="inputEmail" class="col-sm-2 col-form-label">Nit</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="contrasena" class="form-control">
+                                            <input type="text" name="nit" class="form-control" value="<?php echo $_REQUEST['nit'] ?>">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <label for="text" class="col-sm-2 col-form-label">Versión del sistema</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="confirmar" class="form-control">
+                                            <input type="text" name="version" class="form-control" value="<?php echo $_REQUEST['version'] ?>">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <label for="text" class="col-sm-2 col-form-label">Url del cliente</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="confirmar" class="form-control">
+                                            <input type="text" name="url" class="form-control" value="<?php echo $_REQUEST['url'] ?>">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <label class="col-sm-2 col-form-label">Estado</label>
                                         <div class="col-sm-10">
-                                            <select name="rol" class="form-select" aria-label="Default select example">
+                                            <select name="estado" class="form-select" aria-label="Default select example">
                                                 <option selected>[Seleccione]</option>
-                                                <option value="">Activo</option>
-                                                <option value="">Inactivo</option>
+                                                <option value="on" <?php echo $_REQUEST['estado'] == 'on' ? "selected" : "" ?> >Activo</option>
+                                                <option value="off" <?php echo $_REQUEST['estado'] == 'off' ? "selected" : "" ?> >Inactivo</option>
                                             </select>
                                         </div>
                                     </div>

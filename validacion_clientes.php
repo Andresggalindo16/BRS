@@ -1,5 +1,12 @@
 
-<?php require_once "controller/solicitudescontroller.php"?>
+<?php 
+
+require_once "modelos/cliente.php"; 
+
+$cliente = new cliente;
+
+?>
+
 <!-- ======= UwU ======= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -48,99 +55,39 @@
     <section class="section">
       <div class="row">
         <div class="col-lg-12">
-
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Clientes creados</h5>
+              <h5 class="card-title">Clientes Creados</h5>
               <a href="crear_cliente.php"><button type="button" class="btn btn-success rounded-pill">Crear cliente</button></a>
               <br>
               <br>
-
+              <?php if(!empty($_REQUEST['msg'])):  ?>
+              <div class="alert alert-success" role="alert">
+                <?php  echo $_REQUEST['msg'] ?>
+              </div>
+              <?php endif; ?>
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
                   <tr>
 
-                    <th scope="col">N° solicitud</th>
-                    <th scope="col">Titulo</th>
-                    <th scope="col">Cliente</th>
-                    <th scope="col">Prioridad</th>
-                    <th scope="col">Fecha</th>
+                    <th scope="col">Nit</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Version</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Estado</th>
                   </tr>
                 </thead>
                 <tbody>
+                  <?php foreach ($cliente->getCliente() as $clientes): ?>
                   <tr>
-                    <td><a href="actualizar_cliente.php">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
+                    <td><a href="actualizar_cliente.php?id=<?php echo $clientes['idCliente'] ?>&nit=<?php echo $clientes['nit'] ?>&nombre=<?php echo $clientes['nombre']  ?>&version=<?php echo $clientes['version']  ?>&url=<?php echo $clientes['url']  ?>&estado=<?php echo $clientes['estado']?>"><?php echo $clientes['nit']  ?></a></td>
+                    <td><?php echo $clientes['nombre']  ?></td>
+                    <td><?php echo $clientes['version']  ?></td>
+                    <td><?php echo $clientes['url']  ?></td>
+                    <td><?php echo $clientes['estado'] == 'on' ? 'Activo' : 'Inactivo'  ?></td>
                   </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
-                  <tr>
-
-                  <tr>
-                    <td><a href="">HLP-001</a></td>
-                    <td>Error Solicitudes</td>
-                    <td>Sanitas</td>
-                    <td>Alta</td>
-                    <td>2022-10-24</td>
-                  </tr>
+                  <?php endforeach;  ?>
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
