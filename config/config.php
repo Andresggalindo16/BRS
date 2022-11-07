@@ -17,6 +17,15 @@ class conexion
         $this->conn->close();
     }
 
+    function dir($file){
+        if (is_file("$file")){
+            require_once "$file";
+         } elseif(is_file("../$file")) {        
+             require_once "../$file";
+         }else{
+            require_once "../../$file";
+         }
+    }
 
 
     //Mediante el método connect
