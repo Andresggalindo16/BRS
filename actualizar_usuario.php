@@ -33,7 +33,7 @@
     <!-- ======= UwU ======= -->
 
     <main id="main" class="main">
-        <form name="formulario" action="" method="post">
+        <form name="formulario" action="controller/actUsuarioController.php" method="post">
             <div class="pagetitle">
                 <h1>Editar Usuario</h1>
                 <nav>
@@ -49,40 +49,32 @@
             <section class="section">
                 <div class="row">
                     <div class="caja">
-
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Editar Usuario</h5>
 
                                 <!-- General Form Elements -->
+
                                 <form>
-
-
                                     <div class="row mb-3">
                                         <div class="row mb-3">
                                             <label for="inputPassword" class="col-sm-2 col-form-label">Usuario</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="contrasena" class="form-control">
+                                            <input type="hidden" name="id" class="form-control" value="<?php echo $_REQUEST['id']  ?>">
+                                                <input type="text" name="usuario" class="form-control" value="<?php echo $_REQUEST['usuario']  ?>">
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <label for="inputPassword"
                                                 class="col-sm-2 col-form-label">Contraseña</label>
                                             <div class="col-sm-10">
-                                                <input type="password" name="contrasena" class="form-control">
+                                                <input type="password" name="contrasena"  require class="form-control">
                                             </div>
                                         </div>
                                         <br>
-                                        <div class="row mb-3">
-                                            <label for="inputPassword" class="col-sm-2 col-form-label">Confirmar
-                                                Contraseña</label>
-                                            <div class="col-sm-10">
-                                                <input type="password" name="confirmar" class="form-control">
-                                            </div>
-                                        </div>
-
+                                        
                                         <div class="text-center">
-                                            <input type="submit" onclick="" class="btn btn-outline-primary" value="Guardar">
+                                            <input type="submit" class="btn btn-outline-primary" value="Guardar">
                                         </div>
                                 </form>
                             </div>
@@ -92,10 +84,6 @@
 
             </section>
         </form>
-
-
-
-
     </main>
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">

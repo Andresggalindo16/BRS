@@ -8,6 +8,6 @@ $usuario2 = new usuario;
 if (empty($_POST)) {
     header("location: ../crear_usuario.php");
 }else {
-    $usuario = $usuario2->insertUsuario($_POST);
-    header("location: ../validacion_usuario.php?msg=Usuario Creado Correctamente!");   
+    $usuario = $usuario2->updateUsuario($_POST);
+    header("location: ../validacion_usuario.php?msg=Usuario Actualizado Correctamente!");   
 }

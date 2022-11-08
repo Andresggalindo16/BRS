@@ -61,26 +61,30 @@ $usuario = new usuario;
               <h5 class="card-title">Validar Usuario</h5>
               <a href="crear_usuario.php"><button type="button" class="btn btn-success rounded-pill">Crear Usuario</button></a>
               <br>
-                
+              <br>
+              <?php if(!empty($_REQUEST['msg'])):  ?>
+              <div class="alert alert-success" role="alert">
+                <?php  echo $_REQUEST['msg'] ?>
+              </div>
+              <?php endif; ?>
 
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
                   <tr>
                     <th scope="col">Usuario</th>
-                    <th scope="col">Tipo Usuario</th>
+                    <th scope="col">Rol</th>
                     <th scope="col">Estado</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <?php  foreach ($usuario->getUsuario() as $usuarios): ?>
-                    <td><a href="actualizar_usuario.php"> <?php echo $usuarios['usuario']  ?></td>
+                <?php  foreach ($usuario->getUsuario() as $usuarios): ?>  
+                <tr>
+                    <td><a href="actualizar_usuario.php?id=<?php echo $usuarios['idUsuario']  ?>&usuario=<?php echo $usuarios['usuario']  ?>"> <?php echo $usuarios['usuario']  ?></td>
                     <td> <?php echo $usuario->getRol($usuarios['idRol'])[0]  ?> </td>
                     <td> <?php echo $usuarios['estado'] == 'on' ? 'Activo' : 'Inactivo'  ?> </td>
-                    <?php  endforeach;  ?>
                   </tr>
-                
+                  <?php  endforeach;  ?>
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
