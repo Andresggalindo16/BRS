@@ -1,3 +1,12 @@
+
+<?php 
+
+require_once "modelos/usuario.php"; 
+
+$usuario = new usuario;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +42,7 @@
     <!-- ======= UwU ======= -->
 
     <main id="main" class="main">
-        <form name="formulario" action="..\controllers\controladorusuario.php" method="post">
+        <form name="formulario" action="controller/usuarioController.php" method="post">
             <div class="pagetitle">
                 <h1>Creación de Usuario</h1>
                 <nav>
@@ -61,8 +70,6 @@
                                     <div class="row mb-3">
                                         <label for="inputEmail" class="col-sm-2 col-form-label">Nombre Usuario</label>
                                         <div class="col-sm-10">
-                                            <input type="hidden" name="id" id="id">
-                                            <input type="hidden" name="operacion" id="operacion">
                                             <input type="text" class="form-control" name="usuario">
                                         </div>
                                     </div>
@@ -73,27 +80,17 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <label for="inputPassword" class="col-sm-2 col-form-label">Confirme su contraseña</label>
-                                        <div class="col-sm-10">
-                                            <input type="password" name="confirmar" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
                                         <label class="col-sm-2 col-form-label">Rol</label>
                                         <div class="col-sm-10">
                                             <select name="rol" class="form-select" aria-label="Default select example">
-                                                <option selected>[Seleccione]</option>
-
-                                                <option value="">Asesor</option>
-                                                <option value="">Coordinador</option>
-                                                <option value="">Desarrollador</option>
-                                                <option value="">Administrador</option>
-
+                                                <?php  foreach ($usuario->getAllRol() as $usuarios):  ?>
+                                                <option value="<?php  echo $usuarios['idRol']  ?>"><?php echo $usuarios['nombre']  ?></option>
+                                                <?php endforeach; ?>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="text-center">
-                                        <input type="submit" onclick="" class="btn btn-outline-primary" value="Guardar">
+                                        <input type="submit" class="btn btn-outline-primary" value="Guardar">
                                     </div>
                                 </form>
                             </div>

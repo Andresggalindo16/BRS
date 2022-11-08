@@ -31,13 +31,13 @@ class usuario
 
     function insertUsuario($data)
     {
-        $sql = "INSERT INTO usuarios (usuario, contrasena, idRol, usuarioRegistra) VALUES ('{$data['usuario']}', '{$data['contrasena']}', '{$data['idRol']}', '{$_SESSION['usuario']}')";
+        $sql = "INSERT INTO usuarios (usuario, contrasena, idRol, usuarioRegistra) VALUES ('{$data['usuario']}', '{$data['contrasena']}', '{$data['rol']}', '{$_SESSION['usuario']}')";
         return $this->conn->updateData($sql);
     }
 
     function updateUsuario($data)
     {
-        $sql = "INSERT INTO usuarios (usuario, contrasena, idRol, usuarioRegistra) VALUES ('{$data['usuario']}', '{$data['contrasena']}', '{$data['idRol']}', '{$_SESSION['usuario']}')";
+        $sql = "UPDATE usuarios SET usuario = '{$data['usuario']}', contrasena = '{$data['contrasena']}' WHERE idUsuario = '{$data['id']}'";
         return $this->conn->updateData($sql);
     }
    
@@ -49,8 +49,14 @@ class usuario
 
     function getRol($rol)
     {
-        $sql = "SELECT nombre FROM roles WHERE idRol =$rol";
+        $sql = "SELECT nombre FROM roles WHERE idRol =$rol AND estado ='on'";
         return $this->conn->getData($sql)[0];
+    }
+
+    function getAllRol()
+    {
+        $sql = "SELECT * FROM roles WHERE estado ='on'";
+        return $this->conn->getData($sql);
     }
 
   

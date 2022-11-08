@@ -9,5 +9,5 @@ if (empty($_POST['actualizar'])) {
     header("location: ../actualizar_cliente.php");
 }else {
     $cliente = $cliente2->updateCliente($_REQUEST);
-    header("location: ../validacion_clientes.php");   
+    header("location: ../validacion_clientes.php?msg=Cliente Actualizado Correctamente!");   
 }
