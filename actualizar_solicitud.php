@@ -94,7 +94,7 @@
               <div class="row mb-3">
                 <label class="col-sm-2 col-form-label">Responsable</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" value="<?php echo $solicitud[0]['idResponsable'] ?>" readonly>
+                  <input type="text" class="form-control" value="<?php echo $solicitud[0]['idResponsable']?>" readonly>
                 </div>
               </div>
 

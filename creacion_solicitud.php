@@ -84,10 +84,11 @@
                   <label class="col-sm-2 col-form-label">Cliente</label>
                   <div class="col-sm-10">
                     <select name="cliente" id="cliente" class="form-select" aria-label="Default select example" required>
-                      <option selected>[Seleccione]</option>
-                      <option value="1">Sanitas</option>
-                      <option value="2">ser salu</option>
-                      <option value="3">Hestratego</option>
+                      <option selected>[Seleccione]</option> 
+                      <?php foreach($objetocuentas->getCliente() as $cliente):?>
+                      <option value="<?php echo $cliente['idCliente'] ?>"> <?php echo $cliente['nombre'] ?> </option>
+                      <?php endforeach; ?>
+                      
                     </select>
                   </div>
                 </div>
@@ -106,8 +107,9 @@
                   <div class="col-sm-10">
                     <select name="responsable" id="responsable" class="form-select" aria-label="Default select example" required>
                       <option selected>[Seleccione]</option>
-                      <option value="1">Jerney</option>
-                      <option value="2">Harnuel</option>
+                      <?php foreach($objetocuentas->getResponsable() as $cliente):?>
+                      <option value="<?php echo $cliente['idUsuario'] ?>"> <?php echo $cliente['usuario'] ?> </option>
+                      <?php endforeach;?>                    
                     </select>
                   </div>
                 </div>
